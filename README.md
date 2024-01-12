@@ -42,7 +42,7 @@ gcc main.c -o page_replacement
 Replace `[input file]`, `[algorithm]`, `[num_frames]`, `[show_process]`, and `[debug]` with your preferred settings.
 
 
-# Page Replacement Algorithm Execution Results
+# Cache Replacement Algorithm Execution Results
 
 This section presents the execution results of various page replacement algorithms. These results were obtained under a test environment with specific conditions described below.
 
