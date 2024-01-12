@@ -1,6 +1,6 @@
 # Cache-replacement-policies
 Cache replacement policies in C
-This repository contains a comprehensive implementation of various page replacement algorithms written in C. These algorithms play a crucial role in operating systems for managing pages in memory. The project is designed primarily for educational purposes, aiming to provide insight into how different page replacement strategies function under varying circumstances.
+This repository contains a comprehensive implementation of various cache replacement algorithms written in C. These algorithms play a crucial role in operating systems for managing pages in memory. The project is designed primarily for educational purposes, aiming to provide insight into how different page replacement strategies function under varying circumstances.
 
 ## Algorithms Implemented
 
