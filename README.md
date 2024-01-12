@@ -63,7 +63,7 @@ The following results showcase the number of hits, misses, and the hit ratio ach
 ![12m](https://imgur.com/5NIATgf)
 
 ### Results for `4000.addrtrace`
-![4k]([https://imgur.com/8tl7NGh](https://imgur.com/8tl7NGh))
+![4k](https://imgur.com/8tl7NGh)
 
 ### Results for `smallmix.addrtrace`
 ![small](https://imgur.com/Y8iOiPn)
