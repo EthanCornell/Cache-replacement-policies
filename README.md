@@ -41,6 +41,37 @@ gcc main.c -o page_replacement
 
 Replace `[input file]`, `[algorithm]`, `[num_frames]`, `[show_process]`, and `[debug]` with your preferred settings.
 
+
+# Page Replacement Algorithm Execution Results
+
+This section presents the execution results of various page replacement algorithms. These results were obtained under a test environment with specific conditions described below.
+
+## Test Environment
+
+- Number of frames in memory: 3
+- Number of page references: Varies per test file
+- Test files used:
+  - `12million.addrtrace`
+  - `4000.addrtrace`
+  - `smallmix.addrtrace`
+
+## Results
+
+The following results showcase the number of hits, misses, and the hit ratio achieved by each algorithm when tested with different trace files.
+
+### Results for `12million.addrtrace`
+![12m](https://imgur.com/5NIATgf)
+
+### Results for `4000.addrtrace`
+![4k](https://imgur.com/8tl7NGh)
+
+### Results for `smallmix.addrtrace`
+![small](https://imgur.com/Y8iOiPn)
+
+## Interpretation
+
+These results indicate that the LFRU algorithm consistently outperforms other algorithms in terms of hit ratio across different test traces.
+
 ## Contributing
 
 Contributions to enhance or extend the functionality of this project are welcome. Please feel free to fork the repository, make changes, and submit a pull request.
