@@ -60,13 +60,13 @@ This section presents the execution results of various page replacement algorith
 The following results showcase the number of hits, misses, and the hit ratio achieved by each algorithm when tested with different trace files.
 
 ### Results for `12million.addrtrace`
-![12m](results/12mresult.jpg)
+![12m](results/12mresult.JPG)
 
 ### Results for `4000.addrtrace`
-![4k](results/4000result.jpg)
+![4k](results/4000result.JPG)
 
 ### Results for `smallmix.addrtrace`
-![small](results/smallresult.jpg)
+![small](results/smallresult.JPG)
 
 ## Interpretation
 
