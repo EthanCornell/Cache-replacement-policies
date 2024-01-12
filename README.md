@@ -31,13 +31,13 @@ Each algorithm employs its unique approach to determine which page to evict when
 Clone the repository: git clone https://github.com/EthanCornell/Cache-replacement-policies.git
 
 2. Navigate to the project directory:
-cd page-replacement-algorithms
+cd cache-replacement-algorithms
 
 4. Compile the source code:
-gcc main.c -o page_replacement
+gcc CacheReplacementAlgorithm.c -o cache_replacement
 
 5. Run the program:
-./page_replacement [input file] [algorithm] [num_frames] [show_process] [debug]
+./cache_replacement [input file] [algorithm] [num_frames] [show_process] [debug]
 
 Replace `[input file]`, `[algorithm]`, `[num_frames]`, `[show_process]`, and `[debug]` with your preferred settings.
 
