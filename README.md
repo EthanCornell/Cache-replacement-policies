@@ -45,5 +45,7 @@ Replace `[input file]`, `[algorithm]`, `[num_frames]`, `[show_process]`, and `[d
 
 Contributions to enhance or extend the functionality of this project are welcome. Please feel free to fork the repository, make changes, and submit a pull request.
 
+### License:
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
 
