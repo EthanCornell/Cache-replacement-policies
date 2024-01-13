@@ -79,4 +79,7 @@ Contributions to enhance or extend the functionality of this project are welcome
 ### License:
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE.md) file for details.
 
+## References
+- [LRFU patent](https://patentimages.storage.googleapis.com/60/c5/34/c94ab8b27e2f9d/US10819823.pdf)
+- [https://en.wikipedia.org/wiki/Cache_replacement_policies](https://en.wikipedia.org/wiki/Cache_replacement_policies)
 
