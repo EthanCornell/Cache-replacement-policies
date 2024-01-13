@@ -74,7 +74,7 @@ These results indicate that the LFRU algorithm consistently outperforms other al
 
 ## Contributing
 
-Contributions to enhance or extend the functionality of this project are welcome. Please feel free to fork the repository, make changes, and submit a pull request.
+- Ethan Huang
 
 ### License:
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE.md) file for details.
