@@ -35,7 +35,7 @@
 
 int num_frames = 10;           // Number of avaliable pages in page tables
 int page_ref_upper_bound = 32; // Largest page reference
-int max_page_calls = 1000;     // Max number of page refs to test
+int max_page_calls = 24;     // Max number of page refs to test
 
 int debug = 0;                 // Debug bool, 1 shows verbose output
 int printrefs = 0;             // Print refs bool, 1 shows output after each page ref
