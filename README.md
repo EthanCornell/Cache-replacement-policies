@@ -15,6 +15,7 @@ This repository contains a comprehensive implementation of various cache replace
 - Not Recently Used (NRU)
 - Most Frequently Used (MFU)
 - Least Frequently Recently Used (LFRU)
+- Least Frequently Used (LFU)
 
 Each algorithm employs its unique approach to determine which page to evict when a page fault occurs, offering various efficiency levels based on the specific use case.
 
