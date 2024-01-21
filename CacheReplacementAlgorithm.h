@@ -9,12 +9,6 @@ LIST_HEAD(Page_Ref_List, Page_Ref) page_refs;
 LIST_HEAD(Frame_List, Frame);
 
 // struct to hold Frame info
-// typedef struct Page_Ref
-// {
-//         LIST_ENTRY(Page_Ref) pages; // frames node, next
-//         int page_num;
-// } Page_Ref;
-
 typedef struct Page_Ref {
     LIST_ENTRY(Page_Ref) pages; 
     int page_num;
