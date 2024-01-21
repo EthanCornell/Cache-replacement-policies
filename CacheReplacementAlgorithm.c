@@ -289,6 +289,7 @@ Algorithm_Data *create_algo_data_store()
     {
         initializeLFRUPartitions(data, PRIVILEGED_PARTITION_SIZE, UNPRIVILEGED_PARTITION_SIZE);
     }
+    data->exec_time = 0; // Initialize execution time
     return data;
 }
 
@@ -355,24 +356,49 @@ int get_ref()
 }
 
 // page all selected algorithms with input ref
-int page(int page_ref)
-{
+// int page(int page_ref)
+// {
+//     last_page_ref = page_ref;
+//     size_t i = 0;
+//     for (i = 0; i < num_algos; i++)
+//     {
+//         if (algos[i].selected == 1)
+//         {
+//             algos[i].algo(algos[i].data);
+//             if (printrefs == 1)
+//             {
+//                 print_stats(algos[i]);
+//             }
+//         }
+//     }
+
+//     return 0;
+// }
+
+int page(int page_ref) {
     last_page_ref = page_ref;
     size_t i = 0;
-    for (i = 0; i < num_algos; i++)
-    {
-        if (algos[i].selected == 1)
-        {
+    clock_t start_time, end_time;
+    
+    for (i = 0; i < num_algos; i++) {
+        if (algos[i].selected == 1) {
+            start_time = clock(); // Start time
             algos[i].algo(algos[i].data);
-            if (printrefs == 1)
-            {
+            end_time = clock(); // End time
+            
+            // Accumulate the execution time
+            algos[i].data->exec_time += (end_time - start_time);
+            
+            if (printrefs == 1) {
                 print_stats(algos[i]);
             }
         }
     }
-
     return 0;
 }
+
+
+
 
 // Add victim frame evicted from page table to list of victims
 int add_victim(struct Frame_List *victim_list, struct Frame *frame)
@@ -910,7 +936,7 @@ int MFU(Algorithm_Data *data)
     return fault;
 }
 
-// function for LRU and LFRU
+// helper function for LRU and LFRU
 int currentTime()
 {
     static int time = 0;
@@ -970,7 +996,6 @@ int LFU(Algorithm_Data *data) {
 
 
 // LFRU section
-
 
 // Check if a page is in the given partition
 int isPageInPartition(Partition *partition, int page)
@@ -1191,15 +1216,16 @@ int print_stats(Algorithm algo)
 }
 
 // Function to print summary report of an Algorithm
-int print_summary(Algorithm algo)
-{
+int print_summary(Algorithm algo) {
     printf("%s Algorithm\n", algo.label);
     printf("Frames in Mem: %d, ", num_frames);
     printf("Hits: %d, ", algo.data->hits);
     printf("Misses: %d, ", algo.data->misses);
-    printf("Hit Ratio: %f\n", (double)algo.data->hits / (double)(algo.data->hits + algo.data->misses));
+    printf("Hit Ratio: %f, ", (double)algo.data->hits/(double)(algo.data->hits + algo.data->misses));
+    printf("Total Execution Time: %f seconds\n", (double)algo.data->exec_time/CLOCKS_PER_SEC);
     return 0;
 }
+
 
 // Print list
 int print_list(struct Frame *head, const char *index_label, const char *value_label)
