@@ -1,24 +1,3 @@
-/*
- * Copyright (c) Cornell University.
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- * Author: I-Hsuan (Ethan) Huang
- * Email: ih246@cornell.edu
- * Project: Cache Replacement Algorithms
- */
-
-
 #ifndef PAGEREPLACEMENTALGORITHM_H
 #define PAGEREPLACEMENTALGORITHM_H
 
@@ -30,6 +9,12 @@ LIST_HEAD(Page_Ref_List, Page_Ref) page_refs;
 LIST_HEAD(Frame_List, Frame);
 
 // struct to hold Frame info
+// typedef struct Page_Ref
+// {
+//         LIST_ENTRY(Page_Ref) pages; // frames node, next
+//         int page_num;
+// } Page_Ref;
+
 typedef struct Page_Ref {
     LIST_ENTRY(Page_Ref) pages; 
     int page_num;
@@ -58,6 +43,7 @@ typedef struct {
         struct Frame_List victim_list; // List to hold frames that were replaced in page table
         Frame *last_victim;            // Holds last frame used as a victim to make inserting to victim list faster
         void *extra;                   // For storing additional data
+        clock_t exec_time; // Store execution time for performance analysis
 } Algorithm_Data;
 
 // an Algorithm
