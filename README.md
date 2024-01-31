@@ -21,7 +21,7 @@ Each algorithm employs its unique approach to determine which page to evict when
 
 ## Features
 
-- Comprehensive implementation of 11 different page replacement strategies.
+- Comprehensive implementation of 12 different page replacement strategies.
 - Configurable settings for the number of frames, page reference size, and the total number of page calls.
 - Debugging and verbose output options for in-depth analysis.
 - Custom LFRU algorithm implementation demonstrating a hybrid approach.
